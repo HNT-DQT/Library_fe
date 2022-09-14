@@ -2,17 +2,9 @@ import { Form, Input, Select } from 'antd';
 
 import './Layout.css';
 import logo from '../Image/logo1.jpg';
+import Menu from '../Component/Menu/Menu';
 
 const { Option } = Select;
-
-const handleOpenMenu = () => {
-  document.getElementById('menu-layer').classList.remove('hidden');
-}
-
-const handleCloseMenu = (e) => {
-  if (e.target === e.currentTarget)
-  document.getElementById('menu-layer').classList.add('hidden');
-}
 
 function MainHeader() {
   return (
@@ -31,16 +23,7 @@ function MainHeader() {
           <Input.Search placeholder='Tìm kiếm' size='large' enterButton/>
         </Form.Item>
       </div>
-      <button className='button-option' onClick={handleOpenMenu}>
-        ☰
-      </button>
-      <div 
-        id='menu-layer' 
-        className='menu-layer hidden'
-        onClick={handleCloseMenu}
-      >
-        <div className='menu'></div>
-      </div>
+      <Menu/>
     </div>
   )
 }

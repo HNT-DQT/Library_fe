@@ -2,7 +2,7 @@ import './Layout.css';
 import MainHeader from './MainHeader';
 import Footer from './Footer';
 
-function PublicLayout() {
+function PublicLayout(props) {
   return (
     <div className='public-layout'>
       <div className='header'>
@@ -10,7 +10,7 @@ function PublicLayout() {
       </div>
       <MainHeader />
       <div className='content'>
-
+        {props.children}
       </div>
       <Footer />
     </div>
