@@ -51,8 +51,8 @@
 
 .content {
   width: 100%;
-  height: max-content;
-
+  /* height: 1000px; */
+  min-height: calc(100vh - 275px);
 }
 
 .footer {
